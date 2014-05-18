@@ -1,0 +1,14 @@
+h1 #{t('.title')}
+= simple_format(t('.description'))
+
+form.form-inline
+  = label_tag :format_str, t('label.format_str')
+  |:
+  = text_field_tag :format_str, @format_str, {placeholder: '*/5 * * * *'}
+  = button_tag t('button.check'), type: :button, id: 'btn_check', class: 'btn btn-primary'
+
+span>#{t('label.status')}:
+span#status
+span#message
+br
+#result
