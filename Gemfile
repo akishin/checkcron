@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.1.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.0'
+gem 'rails', '4.1.5'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -28,7 +28,7 @@ gem 'libv8', '3.11.8.17'
 gem 'therubyracer',  platforms: :ruby
 gem 'less-rails'
 gem 'slim-rails'
-gem 'twitter-bootstrap-rails'
+gem 'twitter-bootstrap-rails', '~> 2.2.8'
 gem 'simple_form'
 
 gem 'parse-cron'
@@ -48,7 +48,8 @@ group :test, :developent do
 end
 
 group :production do
- gem 'rails_12factor'
+  # for Heroku
+  gem 'rails_12factor'
 end
 
 # Use ActiveModel has_secure_password
